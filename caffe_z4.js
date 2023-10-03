@@ -9,8 +9,8 @@ if (gender === "male") {
     title = "Ms";
 }
 
-const drinkType = prompt("Do you want a hot or cold drink? (hot/cold):");
-const drinkName = prompt("Please enter the name of your drink:");
+const Age = prompt("How Old Are You? ");
+const drinkType = prompt("Do you want a hot or cold drink and name of your drink? (hot/cold):");
 
 
 const userDataDiv = document.getElementById("user-data");
@@ -18,5 +18,6 @@ const userDataList = userDataDiv.querySelector("ul").children;
 
 userDataDiv.querySelector("p").textContent = `Name: ${name}`;
 userDataList[0].textContent = `Gender: ${gender}`;
-userDataList[1].textContent = `Drink Type: ${drinkType}`;
-userDataList[2].textContent = `Drink Name: ${drinkName}`;
+userDataList[1].textContent = `Age : ${Age}`;
+userDataList[2].textContent = `Drink Type & Name: ${drinkType}`;
+
