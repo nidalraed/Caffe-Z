@@ -9,15 +9,34 @@ if (gender === "male") {
     title = "Ms";
 }
 
-const Age = prompt("How Old Are You? ");
+const age = prompt("How Old Are You? ");
 const drinkType = prompt("Do you want a hot or cold drink and name of your drink? (hot/cold):");
 
+const userOutputDiv = document.createElement("div");
+userOutputDiv.setAttribute("id", "user-output");
 
-const userDataDiv = document.getElementById("user-data");
-const userDataList = userDataDiv.querySelector("ul").children;
+const userOutputParagraph = document.createElement("p");
+userOutputParagraph.textContent = "User Information:";
 
-userDataDiv.querySelector("p").textContent = `Name: ${name}`;
-userDataList[0].textContent = `Gender: ${gender}`;
-userDataList[1].textContent = `Age : ${Age}`;
-userDataList[2].textContent = `Drink Type & Name: ${drinkType}`;
+const userOutputList = document.createElement("ul");
+const nameListItem = document.createElement("li");
+nameListItem.textContent = `Name: ${name}`;
 
+const genderListItem = document.createElement("li");
+genderListItem.textContent = `Gender: ${gender}`;
+
+const ageListItem = document.createElement("li");
+ageListItem.textContent = `Age : ${age}`;
+
+const drinkListItem = document.createElement("li");
+drinkListItem.textContent = `Drink Type & Name: ${drinkType}`;
+
+userOutputList.appendChild(nameListItem);
+userOutputList.appendChild(genderListItem);
+userOutputList.appendChild(ageListItem);
+userOutputList.appendChild(drinkListItem);
+
+userOutputParagraph.appendChild(userOutputList);
+userOutputDiv.appendChild(userOutputParagraph);
+
+document.body.appendChild(userOutputDiv);
