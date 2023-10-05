@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //* useing for
+    //         function powerOfTwoForLoop(arr) {
+    //   let result = [];
+    //   for (let i = 0; i < arr.length; i++) {
+    //     result.push(Math.pow(2, arr[i]));
+    //   }
+    //   return result;
+    // }
+
+    // const iArray = [1, 2, 3];
+    // const rloop = powerOfTwoForLoop(iArray);
+    // console.log(rloop); 
+
+    //* Useing forEach
+
+//     function powerOfTwoForEach(arr) {
+//   let result = [];
+//   arr.forEach(function (element) {
+//     result.push(Math.pow(2, element));
+//   });
+//   return result;
+// }
+
+// const iArray = [1, 2, 3];
+// const rorEach = powerOfTwoForEach(iArray);
+// console.log(rorEach); 
+
+
+
+    // * uesing map
+
+    function powerOfTwoMap(arr) {
+  return arr.map(function (element) {
+    return Math.pow(2, element);
+  });
+}
+
+const inputArray = [1, 2, 3];
+const resultMap = powerOfTwoMap(inputArray);
+console.log(resultMap); 
+
+
+
+
+
+    </script>
+</body>
+</html>
